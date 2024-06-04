@@ -1,0 +1,134 @@
+/* Hierarchical selectors */
+
+*{
+    box-sizing: border-box;
+    background-color: rgb(36, 121, 186);
+    margin: 0;
+    padding: 0;
+}
+
+#main-header{
+    text-align: center;
+    margin: 20px;
+    color: #fff;
+}
+
+body > h1{
+    text-align: center;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+/* Artworks */
+.artwork{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 20px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.artwork .flex-item{
+    flex: 1 1 30%;
+    max-width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.tooltip {
+    position: absolute;
+    bottom: 10px;
+    color: white;
+    z-index: 2;
+}
+
+.artwork .flex-item.large{
+    flex: 1 1 100%;
+    max-width: 100%;
+}
+
+.artwork .flex-item img{
+    height: auto;
+    object-fit: cover;
+}
+
+/* Forms */
+.form-container{
+    width: 20%;
+    margin: 20px auto;
+    position: relative;
+    padding: 10px;
+}
+
+.form-container label{
+    font-size: 1rem;
+    color: black;
+}
+
+.form-container input{
+    width: 100%;
+    padding: 5px;
+    margin: 10px 0;
+}
+
+
+.form-container button {
+    width: 100%;
+    padding: 10px; 
+    cursor: pointer;
+}
+
+.paragraph{
+    font-size: xx-large;
+}
+
+/* Pseudo Element */
+.paragraph .description::first-line{
+    color: rgb(158, 102, 28);
+}
+
+/* Media Queries */
+@media (max-width: 1680px) {
+    .form-container{
+        width: 30%;
+    }
+
+    .artwork .flex-item{
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .artwork .flex-item{
+        flex: 1 1 50%;
+        max-width: 50%;
+    }
+    .artwork .flex-item.large {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .form-container {
+        width: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    .artwork .flex-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .artwork .flex-item.large {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .form-container {
+        width: 90%;
+    }
+}
