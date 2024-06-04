@@ -7,6 +7,38 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <!-- Inline CSS Styling -->
+    <header id="main-header" style="font-size: 2.5rem;">Welcome to the Picasso Painting!</header>
+    <!-- Picasso Painting Images for Gallery -->
+    <h1>The Artwork Gallery</h1>
+    <!-- CSS Flex -->
+    <div class="artwork">
+        <div class="flex-item">
+            <img src="https://i.guim.co.uk/img/media/0c1c97b927780e8b78326ab8a534bba9694e335d/0_266_6884_4130/master/6884.jpg?width=620&dpr=1&s=none" alt="Painting 1">
+            <!-- Tooltip to showcase Z-index feature -->
+            <div class="tooltip">Painting 1</div>
+        </div>
+        <div class="flex-item">
+            <img src="https://i.guim.co.uk/img/media/fe0c413561537a9da4f9d4394c286516afb0f92c/0_1326_6565_3938/master/6565.jpg?width=620&dpr=1&s=none" alt="Painting 2">
+            <!-- Tooltip to showcase Z-index feature -->
+            <div class="tooltip">Painting 2</div>
+        </div>
+        <div class="flex-item large">
+            <img src="https://sothebys-com.brightspotcdn.com/dims4/default/52545b5/2147483647/strip/true/crop/450x536+0+0/resize/684x815!/format/webp/quality/90/?url=http%3A%2F%2Fsothebys-brightspot-migration.s3.amazonaws.com%2F20%2F3f%2Fe0%2F337d3e01f64e8fd933fb212088a00aef806fc9f0a9ec8e0223e0f3bb27%2Fpicasso-announcement-1.jpg" alt="Painting 3">
+            <!-- Tooltip to showcase Z-index feature -->
+            <div class="tooltip">Painting 3</div>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <!-- User Forms -->
+        <form action="formssubmitted.html">
+            <label for="name">Name</label> <br>
+            <input type="text" placeholder="Enter Name" name="name" id="name">
+            <label for="email">Email</label> <br>
+            <input type="text" placeholder="Enter Email" name="email" id="email"> <br>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
 </body>
 </html>
